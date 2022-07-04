@@ -13,9 +13,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      {
-      ReactDOM.createPortal(<ModalInfo />, document.getElementById("modal") as HTMLElement)}
-      <BrowserRouter basename="/codiwea">
+      {ReactDOM.createPortal(
+        <ModalInfo />,
+        document.getElementById("modal") as HTMLElement
+      )}
+      <BrowserRouter basename="/">
         <App />
       </BrowserRouter>
     </Provider>
